@@ -12,4 +12,7 @@ $(TARGET): $(SRC)
 clean: 
 	rm -f $(TARGET)
 
+shared:
+	$(CC) -shared $(CFLAGS) -o $(TARGET).so $(SRC) $(LDFLAGS) -fPIC
+
 .PHONY: all clean
